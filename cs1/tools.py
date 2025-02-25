@@ -158,9 +158,10 @@ def db_connect():
     output = ''
     cnx = None
     cursor = None
-    user, password, host = (Path.home()/'.config'/'my.txt').read_text().split(':')
+    user, password, host = (Path.home()/'.config'/'cs1'/'my.txt').read_text().strip().split(':')
+    print(f'{host=}')
     try:
-        cnx = mysql.connector.connect(user=user, password=password, host=host, database='cs1')
+        cnx = mysql.connector.connect(user=user, password=password, host=host, database='fuzzysdatabase')
         cursor = cnx.cursor()
         print(f'Connected to database cs1 at {host}')
     except mysql.connector.ProgrammingError as e:

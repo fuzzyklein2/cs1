@@ -6,6 +6,7 @@ archive/*
 download/*
 test/*
 *.ipynb
+www
 #*#
 # Byte-compiled / optimized / DLL files
 __pycache__/
